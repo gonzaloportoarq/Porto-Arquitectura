@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Porto Arquitectura | Proyecto y Dirección de Obra</title>
-<meta name="description" content="Porto Arquitectura. Estudio de arquitectura especializado en proyecto, documentación y dirección de obra en Canning, Ezeiza y Zona Sur.">
+<title>Porto Arquitectura</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
   --black:#050505;
-  --dark:#0b0b0b;
-  --soft:#141414;
   --white:#f4efe6;
   --muted:#a69d90;
   --gold:#c3a05f;
@@ -24,13 +20,10 @@
 
 *{margin:0;padding:0;box-sizing:border-box}
 
-html{scroll-behavior:smooth}
-
 body{
   font-family:'Montserrat',sans-serif;
   background:var(--black);
   color:var(--white);
-  line-height:1.45;
 }
 
 a{text-decoration:none;color:inherit}
@@ -42,169 +35,90 @@ img{
   display:block;
 }
 
+/* NAV */
+
 .nav{
   position:fixed;
-  top:0;
-  left:0;
   width:100%;
-  height:76px;
-  z-index:100;
-  padding:0 5vw;
+  height:70px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(5,5,5,.78);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--line);
+  padding:0 5vw;
+  background:rgba(0,0,0,0.8);
+  backdrop-filter:blur(12px);
+  z-index:100;
 }
 
 .brand{
-  font-size:14px;
   font-weight:800;
-  letter-spacing:.32em;
-  text-transform:uppercase;
+  letter-spacing:0.25em;
 }
-
-.brand span{color:var(--gold)}
 
 .nav-links{
   display:flex;
-  gap:32px;
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--muted);
+  gap:20px;
+  font-size:12px;
 }
 
-.nav-links a:hover{color:var(--gold)}
+/* HERO */
 
 .hero{
-  min-height:100vh;
-  padding-top:76px;
   display:grid;
-  grid-template-columns:1.15fr .85fr;
-  border-bottom:1px solid var(--line);
-}
-
-.hero-image{
-  position:relative;
-  min-height:calc(100vh - 76px);
-  overflow:hidden;
+  grid-template-columns:1.2fr .8fr;
+  min-height:100vh;
+  padding-top:70px;
 }
 
 .hero-image img{
-  filter:brightness(.62) contrast(1.08) saturate(.92);
-}
-
-.hero-image::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(90deg,rgba(5,5,5,.08),rgba(5,5,5,.58)),
-    linear-gradient(0deg,rgba(5,5,5,.46),transparent 60%);
+  filter:brightness(.65);
 }
 
 .hero-content{
   display:flex;
   align-items:center;
-  padding:7vw 6vw;
-  background:
-    radial-gradient(circle at 80% 18%,rgba(195,160,95,.12),transparent 30%),
-    linear-gradient(180deg,#080808,#040404);
-}
-
-.kicker{
-  color:var(--gold);
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.34em;
-  text-transform:uppercase;
-  margin-bottom:28px;
+  padding:6vw;
 }
 
 h1{
-  font-size:clamp(58px,8vw,118px);
-  line-height:.86;
-  letter-spacing:-.075em;
+  font-size:80px;
   font-weight:900;
-  margin-bottom:34px;
+  line-height:.9;
 }
 
 .lead{
-  color:#d8cfc0;
-  font-size:clamp(17px,1.35vw,22px);
-  max-width:590px;
-  margin-bottom:38px;
+  margin:25px 0;
+  color:#ccc;
 }
 
 .actions{
   display:flex;
-  gap:14px;
+  gap:15px;
   flex-wrap:wrap;
 }
 
 .btn{
-  min-height:52px;
-  padding:0 26px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+  padding:14px 24px;
   background:var(--gold);
-  border:1px solid var(--gold);
-  color:#050505;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  transition:.25s;
+  color:black;
+  font-size:12px;
 }
 
-.btn:hover{
-  transform:translateY(-2px);
-  background:#d3b16d;
+.btn-outline{
+  padding:14px 24px;
+  border:1px solid #777;
+  font-size:12px;
 }
 
-.btn.outline{
-  background:transparent;
-  color:var(--white);
-  border-color:var(--line);
-}
-
-.btn.outline:hover{
-  color:var(--gold);
-  border-color:var(--gold);
-}
+/* PROYECTOS */
 
 .section{
-  padding:clamp(90px,10vw,150px) 5vw;
-}
-
-.section-head{
-  display:grid;
-  grid-template-columns:.55fr 1fr;
-  gap:6vw;
-  margin-bottom:70px;
-}
-
-.section-head h2{
-  font-size:clamp(42px,6vw,90px);
-  line-height:.9;
-  letter-spacing:-.065em;
-  font-weight:900;
-}
-
-.section-head p{
-  align-self:end;
-  max-width:760px;
-  color:var(--muted);
-  font-size:clamp(16px,1.3vw,20px);
+  padding:100px 5vw;
 }
 
 .projects{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:1.5fr 1fr;
   gap:1px;
   background:var(--line);
   border:1px solid var(--line);
@@ -212,410 +126,148 @@ h1{
 
 .project{
   position:relative;
-  min-height:430px;
-  overflow:hidden;
-  background:#111;
+  min-height:70vh;
 }
 
 .project.large{
-  grid-column:span 2;
-  grid-row:span 2;
-  min-height:720px;
+  min-height:85vh;
 }
 
 .project img{
-  filter:brightness(.68) contrast(1.08) saturate(.9);
-  transition:transform .7s ease, filter .7s ease;
+  transition:.6s;
+  filter:brightness(.7);
 }
 
 .project:hover img{
-  transform:scale(1.055);
-  filter:brightness(.52) contrast(1.12) saturate(.9);
+  transform:scale(1.05);
+  filter:brightness(.55);
 }
 
 .project-info{
   position:absolute;
-  inset:auto 0 0 0;
-  padding:clamp(26px,3.2vw,46px);
-  background:linear-gradient(0deg,rgba(5,5,5,.95),rgba(5,5,5,0));
+  bottom:30px;
+  left:30px;
 }
 
 .project-info span{
-  display:block;
   color:var(--gold);
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.24em;
-  text-transform:uppercase;
-  margin-bottom:12px;
+  font-size:11px;
+  letter-spacing:.2em;
 }
 
 .project-info h3{
-  font-size:clamp(30px,3.4vw,56px);
-  line-height:.92;
-  letter-spacing:-.055em;
-  font-weight:900;
-  margin-bottom:12px;
+  font-size:40px;
 }
 
-.project-info p{
-  max-width:460px;
-  color:#d8cfc0;
-  font-size:14px;
-}
-
-.services{
-  background:
-    radial-gradient(circle at 10% 20%,rgba(195,160,95,.08),transparent 32%),
-    var(--dark);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1px;
-  background:var(--line);
-  border:1px solid var(--line);
-}
-
-.service{
-  min-height:340px;
-  padding:46px;
-  background:var(--black);
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-
-.service .num{
-  color:var(--gold);
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:.25em;
-}
-
-.service h3{
-  font-size:clamp(28px,3vw,44px);
-  line-height:.96;
-  letter-spacing:-.05em;
-  margin:44px 0 20px;
-}
-
-.service p{
-  color:var(--muted);
-  font-size:15px;
-}
+/* CONTACTO */
 
 .contact{
-  background:var(--white);
-  color:var(--black);
-  padding:clamp(90px,10vw,150px) 5vw;
+  padding:100px 5vw;
 }
 
-.contact-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:7vw;
+@media(max-width:900px){
+
+.hero{grid-template-columns:1fr}
+
+.projects{
+  grid-template-columns:1fr;
 }
 
-.contact .kicker{color:#9b7a3f}
-
-.contact h2{
-  font-size:clamp(44px,6vw,90px);
-  line-height:.9;
-  letter-spacing:-.065em;
-  font-weight:900;
+.project,
+.project.large{
+  min-height:60vh;
 }
 
-.contact p{
-  color:#5f574b;
-  font-size:clamp(17px,1.4vw,21px);
-  margin:28px 0 38px;
-  max-width:760px;
 }
 
-.contact .btn.outline{
-  color:#050505;
-  border-color:rgba(0,0,0,.22);
-}
-
-.contact-card{
-  border:1px solid rgba(0,0,0,.14);
-  padding:42px;
-}
-
-.contact-row{
-  padding:22px 0;
-  border-bottom:1px solid rgba(0,0,0,.12);
-}
-
-.contact-row:last-child{border-bottom:0}
-
-.contact-row strong{
-  display:block;
-  color:#9b7a3f;
-  font-size:10px;
-  letter-spacing:.24em;
-  text-transform:uppercase;
-  margin-bottom:8px;
-}
-
-.contact-row span,
-.contact-row a{
-  color:#111;
-  font-size:16px;
-}
-
-footer{
-  padding:34px 5vw;
-  border-top:1px solid var(--line);
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  color:var(--muted);
-  font-size:13px;
-}
-
-.footer-brand{
-  color:var(--white);
-  font-weight:900;
-  letter-spacing:.26em;
-  text-transform:uppercase;
-}
-
-@media(max-width:980px){
-  .hero{
-    grid-template-columns:1fr;
-  }
-
-  .hero-image{
-    min-height:54vh;
-  }
-
-  .hero-content{
-    padding:70px 6vw;
-  }
-
-  .section-head,
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .projects{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .project.large{
-    grid-column:span 2;
-    grid-row:auto;
-    min-height:560px;
-  }
-
-  .services-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:640px){
-  .nav{
-    height:68px;
-  }
-
-  .brand{
-    font-size:12px;
-    letter-spacing:.2em;
-  }
-
-  .nav-links{
-    display:none;
-  }
-
-  .hero{
-    padding-top:68px;
-  }
-
-  h1{
-    font-size:clamp(50px,18vw,78px);
-  }
-
-  .actions{
-    flex-direction:column;
-  }
-
-  .btn{
-    width:100%;
-  }
-
-  .projects{
-    grid-template-columns:1fr;
-  }
-
-  .project,
-  .project.large{
-    grid-column:span 1;
-    min-height:440px;
-  }
-
-  .contact-card{
-    padding:28px;
-  }
-
-  footer{
-    flex-direction:column;
-  }
-}
 </style>
 </head>
 
 <body>
 
-<header class="nav">
-  <a href="#" class="brand">PORTO <span>ARQUITECTURA</span></a>
-  <nav class="nav-links">
+<!-- NAV -->
+<div class="nav">
+  <div class="brand">PORTO ARQUITECTURA</div>
+  <div class="nav-links">
     <a href="#proyectos">Proyectos</a>
-    <a href="#servicios">Servicios</a>
     <a href="#contacto">Contacto</a>
-  </nav>
-</header>
+  </div>
+</div>
 
-<main>
-
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-image">
-    <img src="render-tuyuti.jpg" alt="Proyecto Tuyutí 437">
-  </div>
 
-  <div class="hero-content">
-    <div>
-      <div class="kicker">Estudio de arquitectura</div>
-      <h1>Arquitectura<br>que se<br>construye.</h1>
-      <p class="lead">
-        Proyecto, documentación y dirección de obra para viviendas, remodelaciones y desarrollos en Canning, Ezeiza y Zona Sur.
-      </p>
+<div class="hero-image">
+<img src="render-tuyuti.jpg">
+</div>
 
-      <div class="actions">
-        <a class="btn" href="https://wa.me/5491161309100?text=Hola%20vengo%20de%20la%20web%20de%20Porto%20Arquitectura%20y%20quiero%20consultar%20por%20un%20proyecto" target="_blank">Iniciar proyecto</a>
-        <a class="btn outline" href="#proyectos">Ver proyectos</a>
-        <a class="btn outline" href="https://www.instagram.com/portoarquitectura_" target="_blank">Instagram</a>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="hero-content">
+<div>
 
-<section class="section" id="proyectos">
-  <div class="section-head">
-    <div>
-      <div class="kicker">Proyectos</div>
-      <h2>Obras y desarrollos.</h2>
-    </div>
-    <p>
-      Una selección de proyectos residenciales, desarrollos y remodelaciones integrales donde el estudio trabaja desde la idea inicial hasta la documentación y la obra.
-    </p>
-  </div>
+<h1>Arquitectura<br>real</h1>
 
-  <div class="projects only-two">
+<p class="lead">
+Proyecto, documentación y dirección de obra en Canning, Ezeiza y Zona Sur.
+</p>
 
-  <article class="project">
-    <img src="./render-tuyuti.jpg" alt="Tuyutí 437">
-    <div class="project-info">
-      <span>Obra en ejecución · Ezeiza</span>
-      <h3>Tuyutí 437</h3>
-      <p>Edificio contemporáneo de volumetría clara, presencia urbana y dirección integral de obra.</p>
-    </div>
-  </article>
+<div class="actions">
 
-  <article class="project">
-    <img src="./el-amanecer.jpg" alt="El Amanecer">
-    <div class="project-info">
-      <span>Departamentos</span>
-      <h3>El Amanecer</h3>
-      <p>Proyecto de departamentos pensado como desarrollo residencial eficiente y de escala controlada.</p>
-    </div>
-  </article>
+<a class="btn" href="https://wa.me/5491161309100" target="_blank">
+Iniciar proyecto
+</a>
+
+<a class="btn-outline" href="https://www.instagram.com/portoarquitectura_" target="_blank">
+Instagram
+</a>
 
 </div>
+
+</div>
+</div>
+
 </section>
 
-<section class="section services" id="servicios">
-  <div class="section-head">
-    <div>
-      <div class="kicker">Servicios</div>
-      <h2>De la idea a la obra.</h2>
-    </div>
-    <p>
-      Acompañamiento integral para ordenar decisiones, reducir incertidumbre y avanzar con una obra más clara, controlada y profesional.
-    </p>
-  </div>
+<!-- PROYECTOS -->
+<section id="proyectos" class="section">
 
-  <div class="services-grid">
-    <article class="service">
-      <div>
-        <span class="num">01</span>
-        <h3>Proyecto arquitectónico</h3>
-      </div>
-      <p>Anteproyecto, diseño, documentación técnica, imagen de proyecto y definición material.</p>
-    </article>
+<h2 style="margin-bottom:40px;">Proyectos</h2>
 
-    <article class="service">
-      <div>
-        <span class="num">02</span>
-        <h3>Dirección de obra</h3>
-      </div>
-      <p>Planificación, coordinación de contratistas, seguimiento técnico y control de ejecución.</p>
-    </article>
+<div class="projects">
 
-    <article class="service">
-      <div>
-        <span class="num">03</span>
-        <h3>Desarrollos inmobiliarios</h3>
-      </div>
-      <p>Análisis de potencial, estrategia de proyecto, comunicación visual y acompañamiento técnico.</p>
-    </article>
-  </div>
+<div class="project large">
+<img src="./render-tuyuti.jpg">
+<div class="project-info">
+<span>Obra en ejecución</span>
+<h3>Tuyutí 437</h3>
+</div>
+</div>
+
+<div class="project">
+<img src="./el-amanecer.jpg">
+<div class="project-info">
+<span>Departamentos</span>
+<h3>El Amanecer</h3>
+</div>
+</div>
+
+</div>
+
 </section>
 
-<section class="contact" id="contacto">
-  <div class="contact-grid">
-    <div>
-      <div class="kicker">Contacto</div>
-      <h2>Hablemos de tu próximo proyecto.</h2>
-      <p>
-        Si estás por construir, reformar o desarrollar una propiedad, podemos ayudarte a ordenar la idea y avanzar con una propuesta concreta.
-      </p>
+<!-- CONTACTO -->
+<section id="contacto" class="contact">
 
-      <div class="actions">
-        <a class="btn" href="https://wa.me/5491161309100?text=Hola%20vengo%20de%20la%20web%20de%20Porto%20Arquitectura%20y%20quiero%20consultar%20por%20un%20proyecto" target="_blank">Escribir por WhatsApp</a>
-        <a class="btn outline" href="https://www.instagram.com/portoarquitectura_" target="_blank">Ver Instagram</a>
-      </div>
-    </div>
+<h2>Contacto</h2>
 
-    <aside class="contact-card">
-      <div class="contact-row">
-        <strong>Email</strong>
-        <a href="mailto:contacto@portoarquitectura.com">contacto@portoarquitectura.com</a>
-      </div>
+<p style="margin:20px 0;">
+contacto@portoarquitectura.com
+</p>
 
-      <div class="contact-row">
-        <strong>Zona de trabajo</strong>
-        <span>Canning · Ezeiza · Zona Sur · Buenos Aires</span>
-      </div>
+<a class="btn" href="https://www.instagram.com/portoarquitectura_" target="_blank">
+Ver Instagram
+</a>
 
-      <div class="contact-row">
-        <strong>Proyecto destacado</strong>
-        <span>Tuyutí 437 · Obra en ejecución</span>
-      </div>
-    </aside>
-  </div>
 </section>
-
-</main>
-
-<footer>
-  <div class="footer-brand">PORTO ARQUITECTURA</div>
-  <div>Diseño · Proyecto · Dirección de obra</div>
-</footer>
 
 </body>
 </html>
